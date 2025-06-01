@@ -2,10 +2,16 @@ import requests
 from fastapi import FastAPI, Form
 from fastapi.responses import Response
 from typing import Optional
+from dotenv import load_dotenv  # Import load_dotenv
+import os  # Import os to access environment variables
+
+# Load environment variables from .env file
+load_dotenv()
 
 app = FastAPI()
 
-API_KEY = "M371kdhQtQBsGOL78p44hg==o7cqoGsmcwBWmfqf"  # Replace with your API key
+# Fetch the API key from the environment variables
+API_KEY = os.getenv("API_KEY")
 
 def get_random_fact():
     """Fetches a random educational fact from API Ninjas."""

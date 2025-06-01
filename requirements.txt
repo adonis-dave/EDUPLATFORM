@@ -6,3 +6,4 @@ sqlalchemy
 gunicorn
 python-multipart
 africastalking
+python-dotenv
